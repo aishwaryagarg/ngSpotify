@@ -1,1 +1,12 @@
-home.component.html
+<div class="col-md-12">
+	<h4>Search</h4>
+	<input type="text" (keyup)="searchMusic()" [(ngModel)]="searchTerm">
+</div>
+<div class="col-md-12">
+	<div *ngFor="let music of artistArray">
+		<div class="col-md-12 music-div">
+			<h3 ><a [routerLink]="['/artist',music.id]">{{music.name}}</a></h3>
+			<p>genres: {{music.genres}}</p>
+		</div>		
+	</div>
+</div>

@@ -1,0 +1,14 @@
+<div class="col-md-12 heading">
+	<img class="pull-left" [src]="imageSrc" >
+	<h1 class="pull-left">{{name}}</h1>	
+</div>
+
+<div class="col-md-12">
+	<div class="col-md-4 parent-album-container" *ngFor="let album of albumsArray">
+		<div class="album-container">
+			<img [src]= "album.images[1].url">
+			<h4>{{album.name}}</h4>
+			<a class="btn btn-primary details-btn" [routerLink]="['/album',album.id]"> View Details</a>
+		</div>
+	</div>
+</div>

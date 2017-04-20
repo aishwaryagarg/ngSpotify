@@ -1,0 +1,14 @@
+.heading{
+	margin: 10px;
+}
+.album-container{
+	border: 1px solid;
+	text-align: center;
+}
+.parent-album-container{
+	padding: 60px;
+}
+.details-btn{
+	width: 95%;
+	margin: 5px;
+}

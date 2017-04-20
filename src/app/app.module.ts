@@ -7,10 +7,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { homeComponent } from './home.component';
 import { dashboardComponent } from './dashboard.component';
+import { artistComponent } from './artist.component';
+import { albumComponent } from './album.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: homeComponent },
-  { path: 'dashboard', component: dashboardComponent },  
+  { path: 'dashboard', component: dashboardComponent },
+  { path: 'artist/:id', component: artistComponent },  
+  { path: 'album/:id', component: albumComponent },  
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -22,7 +26,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     homeComponent,
-    dashboardComponent
+    dashboardComponent,
+    artistComponent,
+    albumComponent
   ],
   imports: [
     BrowserModule,
